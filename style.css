@@ -10,9 +10,16 @@ body {
 }
 
 .c_claro{
-    background-color: rgb(180, 180, 180);
-    padding: 0px;
+
+
+}
+
+.display{
+    padding: 20px;
+    background-color: rgb(243, 242, 242);
+    height: 50px;
     margin: 5px;
+    border-radius: 10px;
 }
 
 .red{
@@ -29,6 +36,9 @@ body {
 
 button{
 padding: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 30px;
+border-radius: 10px;
 
 
 }
