@@ -14,12 +14,18 @@ body {
 
 }
 
-.display{
+.display {
     padding: 20px;
     background-color: rgb(243, 242, 242);
     height: 50px;
     margin: 5px;
     border-radius: 10px;
+
+    font-size: 30px;       
+    color: black;          
+    display: flex;         
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .red{
