@@ -15,33 +15,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (valor === "=") {
             calcular();
-        } else if (valor === "AC") {
+        }
+        else if (valor === "AC") {
             limpartudo();
-        } else if (valor === "C") {
+        }
+        else if (valor === "C") {
             apagarUltimo();
-        } else {
+        }
+        else {
+
+            let ultimo = valorAtual.slice(-1);
+            let operadores = ["+", "-", "*", "/"];
+
+            if (operadores.includes(valor) && operadores.includes(ultimo)) {
+                return;
+            }
+
             valorAtual += valor;
-          display.textContent = valorAtual;
+            display.textContent = valorAtual;
         }
     }
 
     function calcular() {
         try {
-            valorAtual = eval(valorAtual);
-            display.innerText = valorAtual;
+            if (valorAtual === "") return;
+
+            let resultado = eval(valorAtual);
+            display.textContent = resultado;
+            valorAtual = resultado.toString();
         } catch {
-            display.innerText = "Erro";
+            display.textContent = "Erro";
             valorAtual = "";
         }
     }
 
     function limpartudo() {
         valorAtual = "";
-        display.innerText = "";
+        display.textContent = "";
     }
 
     function apagarUltimo() {
         valorAtual = valorAtual.slice(0, -1);
-        display.innerText = valorAtual;
+        display.textContent = valorAtual;
     }
 });
